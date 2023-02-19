@@ -119,7 +119,7 @@ func (s *MyServer) WebToFront() {
 		v2.GET("/cateen3", s.cateen3)
 
 	}
-	s.router.Run(":8088")
+	s.router.RunTLS(":8088", "ganduward.com_bundle.crt", "ganduward.com.key")
 	//s.Serve_justby_pkg_http()
 }
 func (s *MyServer) Close() error {
